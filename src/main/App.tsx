@@ -6,7 +6,7 @@ let localWindow: any = window;
 
 const { ScrollMagic, TweenMax } = localWindow;
 
-const video = require("../assets/video.mp4");
+const video = require("../assets/out.mp4");
 
 export default function App({}: AppProps) {
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function App({}: AppProps) {
 
     //Scenes
     let scene = new ScrollMagic.Scene({
-      duration: 5000,
+      duration: 12000,
       triggerElement: intro,
       triggerHook: 0,
     })
@@ -41,7 +41,7 @@ export default function App({}: AppProps) {
       .addTo(controller);
 
     //Video Animation
-    let accelamount = 0.5;
+    let accelamount = 0.1;
     let scrollpos = 0;
     let delay = 0;
 
@@ -52,8 +52,9 @@ export default function App({}: AppProps) {
     setInterval(() => {
       delay += (scrollpos - delay) * accelamount;
 
-      video!.currentTime = Math.round(delay * 100) / 100;
-    }, 144);
+      video!.currentTime = delay;
+      // video!.currentTime = Math.round(delay);
+    }, 48);
   }, []);
 
   return (
