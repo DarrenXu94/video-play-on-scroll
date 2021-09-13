@@ -6,7 +6,7 @@ let localWindow: any = window;
 
 const { ScrollMagic, TweenMax } = localWindow;
 
-const video = require("../assets/out.mp4");
+const video = require("../assets/bike.mp4");
 
 export default function App({}: AppProps) {
   useEffect(() => {
