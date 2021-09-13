@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Controller, Scene } from "react-scrollmagic";
-const video = require("../assets/bike.mp4");
+const video = require("../assets/outbike.mp4");
 
 let accelamount = 0.1;
 let delay = 0;
