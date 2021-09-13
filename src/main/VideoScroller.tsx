@@ -34,7 +34,7 @@ export default function VideoScroller({}: VideoScrollerProps) {
               <div className="intro">
                 <h1>Scroll Down</h1>
 
-                <video src={video} ref={videoRef} />
+                <video src={video} ref={videoRef} preload={"auto"} />
               </div>
             );
           }}
