@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { ScrollTrigger, Tween } from "react-gsap";
 import { Controller, Scene } from "react-scrollmagic";
-const video = require("../assets/outbike.mp4");
+const video = require("../assets/crop.mp4");
+// const video = require("../assets/half_the_frame_size.mp4");
 
 let accelamount = 0.1;
 let delay = 0;
@@ -56,7 +57,7 @@ export default function VideoScroller({}: VideoScrollerProps) {
                       opacity: "0.1",
                     },
                   }}
-                  //   totalProgress={progress <= 0.5 ? 0 : (progress - 0.5) * 2}
+                  totalProgress={progress <= 0.5 ? 0 : (progress - 0.5) * 2}
                   paused
                 >
                   <h1>Scroll Down</h1>
