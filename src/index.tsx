@@ -4,5 +4,6 @@ import { render } from "react-dom";
 import "./globals.scss";
 
 import App from "~/main/App";
+import VideoScroller from "./main/VideoScroller";
 
-render(<App />, document.getElementById("root"));
+render(<VideoScroller />, document.getElementById("root"));

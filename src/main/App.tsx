@@ -46,10 +46,12 @@ export default function App({}: AppProps) {
     let delay = 0;
 
     scene.on("update", (e) => {
+      console.log(e.scrollPos);
       scrollpos = e.scrollPos / 1000;
     });
 
     setInterval(() => {
+      console.log("Called");
       delay += (scrollpos - delay) * accelamount;
 
       video!.currentTime = delay;
